@@ -1,11 +1,13 @@
 import type { NubeSDK } from "@tiendanube/nube-sdk-types";
-import { MyCustomField } from "./components/MyCustomField";
+import { getFeedbacks } from "./api";
+import { FeedbackList } from "./components/FeedbackList";
 
-export function App(nube: NubeSDK) {
+export async function App(nube: NubeSDK) {
+	const feedbacks = await getFeedbacks();
 	nube.send("ui:slot:set", () => ({
 		ui: {
 			slots: {
-				after_line_items: <MyCustomField />,
+				after_line_items: <FeedbackList data={feedbacks} />,
 			},
 		},
 	}));
