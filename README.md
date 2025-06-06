@@ -1,5 +1,7 @@
 # NubeFeedback - Tutorial de Estilos do NubeSDK
 
+![Preview do NubeFeedback](media/preview.png)
+
 Este projeto foi criado como uma introdução as funcionalidades de estilo do
 NubeSDK da Tiendanube/Nuvemshop. O app implementa uma lista de feedbacks de
 clientes que é exibida na página do produto, utilizando componentes JSX
